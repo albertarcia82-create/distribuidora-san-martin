@@ -17,13 +17,15 @@ jobs:
         with:
           targets: x86_64-pc-windows-msvc
 
+      - name: Install Visual C++ Build Tools
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-
-      - name: Install Tauri CLI
-        run: npm install -g @tauri-apps/cli@latest
 
       - name: Install dependencies
         run: npm ci
