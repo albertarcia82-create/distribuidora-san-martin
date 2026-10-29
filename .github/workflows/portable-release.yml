@@ -1,0 +1,50 @@
+name: 📦 Build Portable Web Version (Fallback)
+
+on:
+  push:
+    branches: [ main, develop ]
+  workflow_dispatch:
+
+jobs:
+  build-portable:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React frontend
+        run: npm run build
+
+      - name: Create portable package
+        run: |
+          mkdir -p distribuidora-portable
+          cp -r dist/* distribuidora-portable/
+          cp INSTALLATION_GUIDE.md distribuidora-portable/
+          cp USER_MANUAL.md distribuidora-portable/
+          cp README.md distribuidora-portable/
+          cp TESTING_PLAN.md distribuidora-portable/
+          echo "# Distribuidora San Martín - Portable Version" > distribuidora-portable/README_PORTABLE.md
+          echo "" >> distribuidora-portable/README_PORTABLE.md
+          echo "This is a portable web version (development mode)." >> distribuidora-portable/README_PORTABLE.md
+          echo "For production installer, use the Windows build." >> distribuidora-portable/README_PORTABLE.md
+
+      - name: Upload Portable Version
+        uses: actions/upload-artifact@v4
+        with:
+          name: distribuidora-san-martin-portable
+          path: distribuidora-portable/
+          retention-days: 30
+
+      - name: Create Portable Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: distribuidora-portable/**
+          body: "📦 Distribuidora San Martín - Portable Web Version (Development)"
