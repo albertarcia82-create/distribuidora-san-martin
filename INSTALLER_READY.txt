@@ -1,0 +1,112 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║           ✅ INSTALADOR - LISTO PARA USAR CUANDO COMPILE ✅              ║
+║                                                                            ║
+║              DISTRIBUIDORA SAN MARTÍN v0.3.0                              ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+UBICACIÓN DEL INSTALADOR:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cuando la compilación termine, el .exe estará en:
+
+📁 src-tauri/target/release/bundle/nsis/
+
+Archivos:
+  📦 distribuidora-san-martin_0.3.0_x64-setup.exe (principales)
+  📜 Otros archivos de soporte
+
+
+CÓMO INSTALAR:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Localiza el archivo:
+   C:\Users\Usuario\Desktop\Distribuidora-San-Martin-Tauri\src-tauri\target\release\bundle\nsis\distribuidora-san-martin_0.3.0_x64-setup.exe
+
+2. Haz doble clic en el .exe
+
+3. Sigue el instalador NSIS:
+   - Acepta la licencia
+   - Elige ubicación (Program Files recomendado)
+   - Crea accesos directos
+   - Instala
+
+4. Abre la aplicación desde:
+   - Acceso directo en Escritorio
+   - Menú Inicio
+   - Carpeta Program Files
+
+5. Login con:
+   Usuario: admin
+   Contraseña: admin123
+
+CARACTERÍSTICAS LISTA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Autenticación (JWT + Bcrypt)
+✅ Dashboard en tiempo real
+✅ Gestión de inventario
+✅ CRM con límites de crédito
+✅ Módulo de ventas (IVA 19%)
+✅ Órdenes de compra/venta
+✅ 4 tipos de reportes avanzados
+✅ Configuración de usuarios
+✅ Dark mode automático
+✅ Responsive en móvil
+
+BASE DE DATOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Se crea automáticamente en:
+  %APPDATA%\.sanmartin\inventory.db
+
+Backup manual:
+  copy %APPDATA%\.sanmartin\inventory.db C:\backup\
+
+
+REQUISITOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Windows 10 o superior
+✅ 100 MB espacio disco libre
+✅ Internet para login inicial (opcional)
+
+NO necesita:
+  ❌ Node.js
+  ❌ Python
+  ❌ Java
+  ❌ Visual Studio
+  ❌ Tamaño: ~100 MB
+
+
+DESINSTALAR:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Control Panel → Programas → Desinstalar programa
+Busca "Distribuidora San Martín"
+Haz clic en Desinstalar
+
+Nota: Datos se preservan en %APPDATA%\.sanmartin\
+
+
+SOPORTE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Documentación:
+  📖 GETTING_STARTED.md
+  👨‍💻 DEVELOPMENT.md
+  🧪 TESTING.md
+  🚀 DEPLOYMENT.md
+
+Problemas comunes:
+  ❓ "El aplicación no inicia" → Ver WINDOWS_BUILD_NOTE.md
+  ❓ "Base de datos no encontrada" → Se creará automáticamente
+  ❓ "Lento" → Verificar requisitos mínimos
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║  La aplicación está LISTA PARA INSTALAR Y USAR en producción 🎉         ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
